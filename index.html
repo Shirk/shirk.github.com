@@ -1,0 +1,27 @@
+---
+layout: default
+title: Home
+---
+Welcome to bitspin.org!</br>
+</br>
+If you've been here before you may notice a <i>slight</i> change to the site.</br>
+Everything was moved to the fine service of <a href="http://github.com">GitHub</a> and is now powered by <a href="http://pages.github.com/">gh-pages</a>.</br>
+</br>
+All projects are still available and will get their own subpages soon.</br>
+For now you can find the sources here:</br>
+
+<ul>
+	<li><a href="http://github.com/Shirk/zsrelay">::zsrelay</a></li>
+	<li><a href="http://github.com/Shirk/SynFU">::SynFU</a></li>
+	<li><a href="http://github.com/Shirk/EyeTVLive.bundle">::EyeTVLive</a></li>
+	<li><a href="http://github.com/Shirk/BspDragDrop">::BspDragDrop</a></li>
+</ul>
+
+<section>
+<h1>Blog Posts</h1>
+  <ul class=posts>
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
