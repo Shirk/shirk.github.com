@@ -6,6 +6,9 @@
   <!--[if IE]>
     <script src="/js/html5.js" />
   <![endif]-->
+  <script src="/js/jquery-1.6.4.min.js"></script>
+  <script src="/js/github-api.js"></script>
+
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" type="text/css" media="screen, projection" charset="utf-8" href="/css/screen.css" />
   <link rel="stylesheet" type="text/css" media="screen, projection" charset="utf-8" href="/css/pygments.css" />
@@ -18,11 +21,17 @@
   <h1><a href="{{site.url}}">{{site.title}}</a></h1>
 {% endif %}
 </header>
+
 <div class="clear"></div>
-<section class="grid_8 alpha omega">
+<div class="grid_8 alpha omega">
 {{ content }}
-</section>
+</div>
+<div class="grid_2 alpha omega">
+  ::Projects
+  <span id="ghProjectList"/>
+</div>
 <div class="clear"></div>
+
 <footer>
 <div class="grid_4 alpha">
   <p>
