@@ -2,6 +2,8 @@
 
 function parseRepos(data) {
 	var projects = [];
+
+	data = data.data;
 	data.sort(function(a, b) { return a.name > b.name; });
 
 	for (repo in data) {
@@ -18,6 +20,6 @@ function parseRepos(data) {
 }
 
 $(document).ready(function(){
-	$.getJSON('https://api.github.com/users/Shirk/repos', parseRepos)
+	$.getJSON('https://api.github.com/users/Shirk/repos?callback=?', parseRepos)
 })
 
