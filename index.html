@@ -2,20 +2,23 @@
 layout: default
 title: Home
 ---
-Welcome to bitspin.org!</br>
-</br>
-If you've been here before you may notice a <i>slight</i> change to the site.</br>
-Everything was moved to the fine service of <a href="http://github.com">GitHub</a> and is now powered by <a href="http://pages.github.com/">gh-pages</a>.</br>
-</br>
-All projects are still available and will get their own subpages soon.</br>
-For now you can find the sources here:</br>
-
-<ul>
-	<li><a href="http://github.com/Shirk/zsrelay">::zsrelay</a></li>
-	<li><a href="http://github.com/Shirk/SynFU">::SynFU</a></li>
-	<li><a href="http://github.com/Shirk/EyeTVLive.bundle">::EyeTVLive</a></li>
-	<li><a href="http://github.com/Shirk/BspDragDrop">::BspDragDrop</a></li>
-</ul>
+{% comment %} Lookup the newes post for the frontpage category {% endcomment %}
+{% assign seen_top=false %}
+{% for post in site.posts %}
+  {% if seen_top == false %}
+    {% for cat in post.categories %}
+      {% if cat == "frontpage" %}
+      {% assign seen_top=true %}
+<article>
+  <section>
+    <h1>{{ post.title }}</h1>
+    {{ post.content }}
+  </section>
+</article>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 
 <section>
 <h1>Blog Posts</h1>
