@@ -7,11 +7,10 @@ author: by Shirk
 email: shirk (at) bitspin (dot) org
 analytics_id: #Google Analytics ID : UA-xxx-xxx  
 
-auto: false
 lsi: false
-pygments: true
-server_port: 4000
-markdown: maruku
+highlighter: rouge
+port: 4000
+markdown: kramdown
 
 maruku:
   use_tex: false
