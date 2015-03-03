@@ -15,20 +15,22 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml" />
 </head>
 <body>
-<div id="wrap" class="container_12">
-<header class="grid_12 alpha omega">
+<div id="wrap" class="container_10">
+<header class="grid_10 alpha omega">
 {% if site.title %}
   <h1><a href="{{site.url}}">{{site.title}}</a></h1>
 {% endif %}
 </header>
 
 <div class="clear"></div>
-<div class="grid_8 alpha omega">
-{{ content }}
-</div>
-<div class="grid_2 alpha omega">
+<div class="grid_4 alpha omega">
   ::Projects
   <span id="ghProjectList"/>
+</div>
+<div class="grid_10 alpha omega">
+{{ content }}
+</div>
+<div class="grid_4 alpha omega">
   ::Contributions
   <span id="ghContribList"/>
 </div>
